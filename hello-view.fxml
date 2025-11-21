@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.meuprojeto.HelloController">
+    <children>
+        <VBox spacing="8.0" AnchorPane.topAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.bottomAnchor="8.0">
+            <HBox spacing="6.0">
+                <Button text="Cadastrar paciente" onAction="#onAddPatient" />
+                <Button text="Cadastrar médico" onAction="#onAddDoctor" />
+                <Button text="Listar consultas" onAction="#onList" />
+                <Button text="Exportar (CSV)" onAction="#onExport" />
+            </HBox>
+            <TextArea fx:id="output" prefRowCount="15" />
+        </VBox>
+    </children>
+</AnchorPane>

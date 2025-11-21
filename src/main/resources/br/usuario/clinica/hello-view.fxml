@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.usuario.clinica.HelloController">
+    <children>
+        <GridPane AnchorPane.topAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.bottomAnchor="8.0" hgap="6.0" vgap="8.0" style="-fx-padding:8;">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="100" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="30" />
+                <RowConstraints vgrow="ALWAYS" />
+            </rowConstraints>
+
+            <children>
+                <FlowPane fx:id="toolbar" hgap="6.0" vgap="6.0" prefWrapLength="600" alignment="CENTER_LEFT" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                    <children>
+                        <Button text="Cadastrar paciente" onAction="#onAddPatient" />
+                        <Button text="Editar paciente" onAction="#onEditPatient" />
+                        <Button text="Cadastrar médico" onAction="#onAddDoctor" />
+                        <Button text="Editar médico" onAction="#onEditDoctor" />
+                        <Button text="Agendar consulta" onAction="#onSchedule" />
+                        <Button text="Editar consulta" onAction="#onEditAppointment" />
+                        <Button text="Listar consultas" onAction="#onList" />
+                        <Button text="Cancelar consulta" onAction="#onCancel" />
+                        <Button text="Ver lista de espera" onAction="#onWaiting" />
+                        <Button text="Mostrar IDs" onAction="#onShowIds" />
+                        <Button text="Limpar" onAction="#onClear" />
+                        <Button text="Alternar Tema" onAction="#onToggleTheme" />
+                    </children>
+                </FlowPane>
+
+                <TextArea fx:id="output" GridPane.rowIndex="1" GridPane.columnIndex="0" prefRowCount="15" editable="false">
+                    <GridPane.margin>
+                        <Insets top="4" />
+                    </GridPane.margin>
+                </TextArea>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
